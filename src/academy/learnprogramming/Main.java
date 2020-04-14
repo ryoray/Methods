@@ -31,6 +31,12 @@ public class Main {
 
         finalPosition = calculateHighScorePosition(1000);
         displayHighScorePosition("Louise", finalPosition);
+
+        finalPosition = calculateHighScorePosition(500);
+        displayHighScorePosition("Carol", finalPosition);
+
+        finalPosition = calculateHighScorePosition(100);
+        displayHighScorePosition("Frank", finalPosition);
     }
 
     public static void displayHighScorePosition (String playerName, int finalPosition) {
