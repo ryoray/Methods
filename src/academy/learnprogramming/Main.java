@@ -28,6 +28,9 @@ public class Main {
         highScore = calculateScore (gameOver, 50, levelCompleted, bonus);
         finalPosition = calculateHighScorePosition(highScore);
         displayHighScorePosition("Tom", finalPosition);
+
+        finalPosition = calculateHighScorePosition(1000);
+        displayHighScorePosition("Louise", finalPosition);
     }
 
     public static void displayHighScorePosition (String playerName, int finalPosition) {
@@ -36,17 +39,15 @@ public class Main {
     }
 
     public static int calculateHighScorePosition (int highScore) {
-        int finalPosition;
-        if (highScore > 1000) {
-            finalPosition = 1;
-        } else if (highScore > 500 && highScore < 1000) {
-            finalPosition = 2;
-        } else if (highScore > 100 && highScore < 500) {
-            finalPosition = 3;
+        if (highScore >= 1000) {
+            return 1;
+        } else if (highScore >= 500 && highScore < 1000) {
+            return 2;
+        } else if (highScore >= 100 && highScore < 500) {
+            return 3;
         } else {
-            finalPosition = 4;
+            return 4;
         }
-        return finalPosition;
     }
 
 
