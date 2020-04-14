@@ -45,15 +45,24 @@ public class Main {
     }
 
     public static int calculateHighScorePosition (int highScore) {
+//        if (highScore >= 1000) {
+//            return 1;
+//        } else if (highScore >= 500) {
+//            return 2;
+//        } else if (highScore >= 100) {
+//            return 3;
+//        }
+//
+//        return 4;
+        int finalPosition = 4;
         if (highScore >= 1000) {
-            return 1;
-        } else if (highScore >= 500 && highScore < 1000) {
-            return 2;
-        } else if (highScore >= 100 && highScore < 500) {
-            return 3;
-        } else {
-            return 4;
+            finalPosition = 1;
+        } else if (highScore >= 500) {
+            finalPosition = 2;
+        } else if (highScore >= 100) {
+            finalPosition = 3;
         }
+        return finalPosition;
     }
 
 
